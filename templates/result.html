@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction Results</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #343a40; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+        h1 {
+            color: #dc3545; /* Red title */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #212529; /* Dark gray background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow */
+        }
+        h2, h3 {
+            color: #007bff; /* Blue headings */
+        }
+        p {
+            color: #ced4da; /* Light gray text */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Prediction Results</h1>
+
+        <div class="section">
+            <h2>Disease: {{ disease }}</h2>
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <p>{{ description }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Precautions:</h3>
+            <ul>
+                {% for precaution in precautions %}
+                    <li>{{ precaution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Medications:</h3>
+            <ul>
+                {% for medication in medications %}
+                    <li>{{ medication }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Diet Recommendations:</h3>
+            <ul>
+                {% for diet_item in diets %}
+                    <li>{{ diet_item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Workout Recommendations:</h3>
+            <ul>
+                {% for workout_item in workout %}
+                    <li>{{ workout_item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional for content layout) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

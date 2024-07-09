@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Predictor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #343a40; /* Dark gray background */
+            color: #ffffff; /* White text */
+        }
+        h1 {
+            color: #dc3545; /* Red title */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #212529; /* Black form background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow */
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #dc3545; /* Red label text */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #6c757d; /* Dark gray border */
+            border-radius: 5px;
+            background-color: #343a40; /* Dark gray input background */
+            color: #ffffff; /* White text */
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #dc3545; /* Red button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button[type="submit"]:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Predictor</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/predict" method="post">
+                    <div class="form-group">
+                        <label for="symptoms">Enter your symptoms (comma-separated):</label>
+                        <input type="text" class="form-control" id="symptoms" name="symptoms" placeholder="e.g., itching, skin_rash, joint_pain">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Predict Disease</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional for forms) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
